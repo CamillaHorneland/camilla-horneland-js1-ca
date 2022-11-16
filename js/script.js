@@ -1,23 +1,43 @@
 const resultContainer = document.querySelector(".result");
 
-const url = "https://api.disneyapi.dev/characters";
+const url = "http://makeup-api.herokuapp.com/api/v1/products.json";
 
-async function getApi () {
-    const response = await fetch(url);
-    const json = await response.json();
 
-    console.log(json);
+async function getMakeup() {
+    try {
+        const response = await fetch(url);
+        
+        //const json = await data.json();
+        const result = await response.json ();
 
-    const result = json.data;
+        console.log(result);
 
-    result.forEach(function (result) {
-        resultContainer.innerHTML += `<div class="result"> 
-                                           <h3>${result.name}</h3>
-                                          <div class="details-image" 
-                                    style="background-image: url('${result.imageUrl}')</div>
-                                           <p>${result.films}</p>
-                                      </div>`;
-    });
+        //const data = json.results;
+
+        for(let i = 0; i < result.length; i++) {
+
+            if(i===15) {
+            break }        
+   
+          resultContainer.innerHTML += 
+              `<div class="data">
+                <h3>${result[i].name}</h3>
+                <div class="img" style="background-image: url('${result[i].api_featured_image}')"</div>
+                <h4>${result[i].product_type}</h4>
+                 <h4>${result[i].price} $</h4>
+              </div>`;
+        }
+
+    }catch (error) {
+      console.log(error);
+      resultContainer.innerHTML = message("error", error);
+   }
 }
 
-getApi();
+getMakeup();
+
+
+   
+  
+
+
