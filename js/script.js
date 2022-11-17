@@ -7,12 +7,10 @@ async function getMakeup() {
     try {
         const response = await fetch(url);
         
-        //const json = await data.json();
         const result = await response.json ();
 
         console.log(result);
 
-        //const data = json.results;
 
         for(let i = 0; i < result.length; i++) {
 
@@ -25,6 +23,7 @@ async function getMakeup() {
                 <div class="img" style="background-image: url('${result[i].api_featured_image}')"</div>
                 <h4>${result[i].product_type}</h4>
                  <h4>${result[i].price} $</h4>
+                <div class="btn"><a href="details.html" title="Details"><h5>Details</h5></a></div>
               </div>`;
         }
 
