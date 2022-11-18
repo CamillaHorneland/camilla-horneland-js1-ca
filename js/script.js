@@ -11,11 +11,12 @@ async function getMakeup() {
 
         console.log(result);
 
-
+        resultContainer.innerHTML = "";
+        
         for(let i = 0; i < result.length; i++) {
 
             if(i===15) {
-            break }        
+             break }        
    
           resultContainer.innerHTML += 
               `<div class="data">

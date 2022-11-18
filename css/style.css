@@ -5,15 +5,12 @@ body {
 }
 
 .header {
-    text-align: center;
-    height: 200px;
     margin: 50px;
 }
 
 .form {
    text-align: end;
    margin: 20px;
-  
 }
 
 h3 {
@@ -22,8 +19,6 @@ h3 {
 
 h4 {
     color: rgb(85, 84, 84);
-    text-align: end;
-    
 }
 
 .img {
@@ -47,22 +42,18 @@ h4 {
      margin:30px;
  }
 
-.btn {
-    height: 40px;
-    width: 120px;
-    display: flex;
-    margin-top: 100px;
-    margin-left: 200px;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(152, 149, 149);
-    border-radius: 50px;
-    background-color: rgb(235, 218, 243);
- }
-
- h5 {
-    text-decoration: none;
-    color:rgb(79, 76, 76);
+ .btn {
+     height: 40px;
+     width: 120px;
+     display: flex;
+     margin-top: 100px;
+     margin-left: 200px;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid rgb(152, 149, 149);
+     border-radius: 50px;
+     background-color: rgb(235, 218, 243);
+     text-decoration: none;
  }
 
 .loader {
@@ -71,6 +62,8 @@ h4 {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    margin-left: 45%;
+    transform: translateX(-50%);
     animation: spin 2s linear infinite;
 }
 

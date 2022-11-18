@@ -11,6 +11,9 @@ async function getMakeup() {
 
         console.log(result);
 
+
+        resultContainer.innerHTML = "";
+
           resultContainer.innerHTML += 
               `<h2 class="name">${result.name}</h2>
                 <div class="img" style="background-image: url('${result.api_featured_image}')"</div>
