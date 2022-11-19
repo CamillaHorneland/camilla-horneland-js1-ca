@@ -12,30 +12,42 @@ const button = document.querySelector("btn");
 
 
 function validateForm(event) {
+
     event.preventDefault();
+
+    var hasErrors = false;
 
        if (checkLength(yourName.value, 5) === true) {
         yourNameError.style.display = "none";
     } else {
+        hasErrors = true;
         yourNameError.style.display = "block";
     }
 
      if (checkLength(subject.value, 10) === true) {
         subjectError.style.display = "none";
     } else {
+        hasErrors = true;
         subjectError.style.display = "block";
     }
 
     if (validateEmail(email.value) === true) {
         emailError.style.display = "none";
     } else {
+        hasErrors = true;
         emailError.style.display = "block";
     }
 
     if (checkLength(address.value, 15) === true) {
         addressError.style.display = "none";
     } else {
+        hasErrors = true;
         addressError.style.display = "block";
+    }
+
+    if(!hasErrors) {
+       message.innerHTML = '<div class="message">Your message has been sent</div>';
+       form.reset();
     }
 
   console.log("hello");
@@ -57,16 +69,7 @@ function validateEmail(email) {
     return patternMatches;
 }
 
-// message.innerHTML = "";
 
-
-//  function submitForm(event) {
-//     event.preventDefault();
-//     message.innerHTML = '<div class="message">Your message has been sent</div>';
-//     form.reset();
-// }
-
-// form.addEventListener("submit", submitForm);
 
 
 

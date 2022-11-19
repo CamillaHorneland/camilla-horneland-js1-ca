@@ -1,9 +1,19 @@
-const resultContainer = document.querySelector(".result");
+const detailsContainer = document.querySelector(".details");
+const title = document.querySelector("title");
 
-const url = "http://makeup-api.herokuapp.com/api/v1/products/1048.json";
+const queryString = document.location.search;
 
+const params = new URLSearchParams(queryString);
 
-async function getMakeup() {
+const id = params.get("id");
+
+console.log(id);
+
+const url = "http://makeup-api.herokuapp.com/api/v1/products/" + id + ".json";
+
+console.log(url);
+
+async function detailMakeup() {
     try {
         const response = await fetch(url);
         
@@ -11,10 +21,9 @@ async function getMakeup() {
 
         console.log(result);
 
+        detailsContainer.innerHTML = "";
 
-        resultContainer.innerHTML = "";
-
-          resultContainer.innerHTML += 
+          detailsContainer.innerHTML += 
               `<h2 class="name">${result.name}</h2>
                 <div class="img" style="background-image: url('${result.api_featured_image}')"</div>
                 <div class="info">
@@ -22,12 +31,18 @@ async function getMakeup() {
                     <h4>${result.product_type}</h4>
                    <h4>${result.price} $</h4>
                 </div>`;
+                document.title = result.name;
         }
 
     catch (error) {
       console.log(error);
-      resultContainer.innerHTML = message("error", error);
+      detailsContainer.innerHTML = message("error", error);
    }
 
 }
-getMakeup();
+
+detailMakeup();
+
+
+
+

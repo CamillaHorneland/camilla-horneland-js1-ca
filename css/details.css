@@ -3,9 +3,6 @@
     text-align: left;
 }
 
-main {
-    margin: 50px;
-}
 h2 {
     color: rgb(52, 98, 98);
     text-align: center;
@@ -15,24 +12,34 @@ h4 {
     text-align: center;
 }
 
+p {
+   color: rgb(52, 98, 98);
+   line-height: ;
+}
+
 .img {
     height: 350px;
     padding: 10px;
     background-position: center;
 }
 
-.result {
-    padding: 1rem;
+.details {
+   display: flex;
     width: 800px;
-    height:650px;
+    height:870px;
     flex-direction: column;
-    margin-left: 70px;
-    background-color: white;
+    background-color: rgb(231, 227, 227);
+    margin-left: 100px;
 }
 
 
 .info {
     margin-top: 400px; 
+    line-height: 2em;
+}
+
+.loader {
+    margin-left: 45%;
 }
 
 

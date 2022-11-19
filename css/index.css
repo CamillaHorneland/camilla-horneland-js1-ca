@@ -3,11 +3,36 @@
     height: 200px;
 }
 
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.data {
+    display: flex;
+    flex-direction: inline;
+    flex-direction: column;
+    width: 350px;
+    padding: 1rem;
+    margin: 20px;
+    background-color: white;  
+}
+
 h4 {
     text-align: end;
 }
 
-h5 {
+a {
     text-decoration: none;
-    color: rgb(79, 76, 76);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    max-width: 300px;
+    margin: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
 }

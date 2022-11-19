@@ -28,6 +28,17 @@ input {
 
 .btn {
     margin-left: 40%;
+    height: 40px;
+    width: 120px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+     border: 1px solid rgb(152, 149, 149);
+    border-radius: 50px;
+    background-color: rgb(235, 218, 243);
+    text-decoration: none;
+        
 }
 
 .form-error {

@@ -16,17 +16,17 @@ async function getMakeup() {
         for(let i = 0; i < result.length; i++) {
 
             if(i===15) {
-             break }        
-   
+             break }   
+             
           resultContainer.innerHTML += 
               `<div class="data">
-                <h3>${result[i].name}</h3>
-                <div class="img" style="background-image: url('${result[i].api_featured_image}')"</div>
-                <h4>${result[i].product_type}</h4>
-                 <h4>${result[i].price} $</h4>
-                <div class="btn"><a href="details.html" title="Details"><h5>Details</h5></a></div>
-              </div>`;
-        }
+                  <a href="details.html?id=${result[i].id}">
+                  <h3>${result[i].name}</h3>
+                  <div class="img" style="background-image: url('${result[i].api_featured_image}')"</div>
+                  <h4>${result[i].product_type}</h4>
+                  <h4>${result[i].price} $</h4></a>
+             </div>`;
+     }
 
     }catch (error) {
       console.log(error);

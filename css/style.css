@@ -8,7 +8,7 @@ body {
     margin: 50px;
 }
 
-.form {
+.contact {
    text-align: end;
    margin: 20px;
 }
@@ -21,40 +21,14 @@ h4 {
     color: rgb(85, 84, 84);
 }
 
+
 .img {
-   height: 180px;
+    height: 180px;
     background-repeat: no-repeat;
     background-size: contain;
     margin: 1em;
 }
 
-.result {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.data {
-    
-     padding: 1rem;
-     width: 350px;
-     background-color:white;
-     border-radius: 1rem;
-     margin:30px;
- }
-
- .btn {
-     height: 40px;
-     width: 120px;
-     display: flex;
-     margin-top: 100px;
-     margin-left: 200px;
-     justify-content: center;
-     align-items: center;
-     border: 1px solid rgb(152, 149, 149);
-     border-radius: 50px;
-     background-color: rgb(235, 218, 243);
-     text-decoration: none;
- }
 
 .loader {
     border: 15px solid #f3f3f3;
@@ -62,7 +36,6 @@ h4 {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    margin-left: 45%;
     transform: translateX(-50%);
     animation: spin 2s linear infinite;
 }
